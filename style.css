@@ -1,0 +1,410 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #6eaeef;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+header {
+  background: #1a5d3a;
+  color: white;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #4CAF50;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #4CAF50;
+}
+
+/* Hamburger & Mobile Menu */
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hero */
+.hero {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 80px;
+  gap: 3rem;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('Aset/Raja\ Ampat.jpg') center/cover no-repeat;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: #4CAF50;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #4CAF50;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #388E3C;
+  transform: translateY(-3px);
+}
+
+.hero-img img {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Sections */
+section {
+  padding: 100px 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+h2 span {
+  color: #4CAF50;
+}
+
+/* Destinasi */
+.destinasi-grid {
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.destinasi-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.destinasi-card:hover {
+  transform: translateY(-10px);
+}
+
+.destinasi-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinasi-card h3, .destinasi-card p {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+
+/* Paket */
+.paket-list {
+  margin-top: 150px;
+}
+
+
+.paket-card {
+  margin-top: 5vh;
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.paket-card img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.paket-info {
+  padding: 2rem;
+  flex: 1;
+}
+
+.harga {
+  font-size: 1.5rem;
+  color: #4CAF50;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* Kontak */
+.kontak-info {
+  margin-top: 150px;
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.kontak-info > div, form {
+  flex: 1;
+  min-width: 300px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background: #1a5d3a;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* RESPONSIVE: TABLET & MOBILE (≤768px) */
+@media (max-width: 768px) {
+  .hero, .paket-card, .kontak-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .paket-card img {
+    width: 100%;
+  }
+
+  /* Hamburger Menu - Mobile Only */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #1a5d3a;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2rem;
+    transition: left 0.3s ease;
+    z-index: 999;
+    gap: 0;
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Saat checkbox dicentang → menu muncul */
+  .nav-toggle:checked ~ .nav-menu {
+    left: 0;
+  }
+
+}
+
+/* RESPONSIVE: MOBILE KECIL (≤480px) */
+@media (max-width: 480px) {
+  /* Header & Logo */
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding-top: 70px;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 24px;
+    font-size: 0.95rem;
+  }
+
+  .hero-img img {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  /* Section Padding */
+  section {
+    padding: 60px 0;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Destinasi Cards */
+  .destinasi-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .destinasi-card img {
+    height: 180px;
+  }
+
+  /* Paket Card */
+  .paket-card {
+    flex-direction: column;
+  }
+
+  .paket-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  .paket-info {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .harga {
+    font-size: 1.3rem;
+  }
+
+  /* Kontak */
+  .kontak-info > div,
+  form {
+    min-width: 100%;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* Footer */
+  footer {
+    font-size: 0.9rem;
+    padding: 1.5rem 0;
+  }
+
+  /* Hamburger Menu (lebih kecil) */
+  .hamburger {
+    gap: 4px;
+  }
+
+  .hamburger span {
+    width: 22px;
+    height: 3px;
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+  }
+}
